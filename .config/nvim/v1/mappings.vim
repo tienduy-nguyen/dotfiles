@@ -17,7 +17,7 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 " open NERDTree automatically
-autocmd StdinReadPre * let s:std_in=1
+autocmd StdinReadPre * let s:std_in=0
 autocmd VimEnter * NERDTree
 
 let g:NERDTreeGitStatusWithFlags = 1
@@ -140,7 +140,7 @@ nnoremap <silent> <S-t> :tabnew<CR>
 nnoremap <leader>. :lcd %:p:h<CR>
 
 "" Opens an edit command with the path of the currently edited file filled in
-noremap <Leader>e :e <-R>=expand("%:p:h") . "/" <CR>
+noremap <Leader>e :e <R>=expand("%:p:h") . "/" <CR>
 
 "" Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
@@ -670,3 +670,4 @@ nmap <silent> ;l <Plug>(easymotion-overwin-line)
 " <ctrl-k> => Up
 " <ctrl-l> => Right
 " <ctrl-\> => Previous split
+-
