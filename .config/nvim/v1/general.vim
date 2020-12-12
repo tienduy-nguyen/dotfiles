@@ -178,7 +178,7 @@ let g:airline_skip_empty_sections = 1
 
 "*****************************************************************************
 "" Abbreviations
-"*****************************************************************************
+"****************************************************************************
 "" no one is really happy until you have this shortcuts
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -190,4 +190,4 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
-
+*
