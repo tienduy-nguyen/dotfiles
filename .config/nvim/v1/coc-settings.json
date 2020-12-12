@@ -1,0 +1,36 @@
+{
+  "suggest.noselect": false,
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  },
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
+  "eslint.options": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql",
+    "css",
+    "markdown",
+    "python",
+    "ruby"
+  ]
+}
