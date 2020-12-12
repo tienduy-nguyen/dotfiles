@@ -154,7 +154,7 @@ Plug 'leafOfTree/vim-vue-plugin'
 Plug 'ryanoasis/vim-devicons'
 
 "*****************************************************************************
-"*****************************************************************************
+"****************************************************************************
 
 "" Include user's extra bundle
 if filereadable(expand("~/.rc.local.bundles"))
@@ -162,4 +162,4 @@ if filereadable(expand("~/.rc.local.bundles"))
 endif
 
 call plug#end()
-
+*
