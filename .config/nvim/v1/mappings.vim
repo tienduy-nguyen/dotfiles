@@ -12,13 +12,15 @@ let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 32
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-nnoremap <silent> <F2> :NERDTreeFind<CR>
-nnoremap <silent> <F3> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeFind<CR>
+nnoremap <F3> :NERDTreeToggle<CR>
+
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 " open NERDTree automatically
 autocmd StdinReadPre * let s:std_in=0
-autocmd VimEnter * NERDTree
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 
 let g:NERDTreeGitStatusWithFlags = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -140,7 +142,7 @@ nnoremap <silent> <S-t> :tabnew<CR>
 nnoremap <leader>. :lcd %:p:h<CR>
 
 "" Opens an edit command with the path of the currently edited file filled in
-noremap <Leader>e :e <R>=expand("%:p:h") . "/" <CR>
+noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 "" Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
@@ -208,6 +210,8 @@ noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
+nmap <C-n> :bn<CR>  " Next buffer in list
+nmap <C-p> :bp<CR>  " Previous buffer in list
 
 "" Close buffer
 noremap <leader>c :bd<CR>
@@ -670,4 +674,3 @@ nmap <silent> ;l <Plug>(easymotion-overwin-line)
 " <ctrl-k> => Up
 " <ctrl-l> => Right
 " <ctrl-\> => Previous split
--

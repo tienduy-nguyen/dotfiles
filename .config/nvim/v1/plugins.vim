@@ -59,10 +59,13 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'haishanh/night-owl.vim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'Rigellute/rigel'
+Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
+
+
 
 "" Visual Settings
 Plug 'itchyny/lightline.vim'
-
 Plug 'voldikss/vim-floaterm'
 Plug 'ctrlpvim/ctrlp.vim' " CtrlP Search files in directory
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplete
@@ -154,7 +157,7 @@ Plug 'leafOfTree/vim-vue-plugin'
 Plug 'ryanoasis/vim-devicons'
 
 "*****************************************************************************
-"****************************************************************************
+"*****************************************************************************
 
 "" Include user's extra bundle
 if filereadable(expand("~/.rc.local.bundles"))
@@ -162,4 +165,3 @@ if filereadable(expand("~/.rc.local.bundles"))
 endif
 
 call plug#end()
-*
