@@ -1,5 +1,4 @@
-"----------------------------------------------------------------------
-"                   RMD map for compiling
+"----------------------------------------------------------------------                 RMD map for compiling
 "----------------------------------------------------------------------
     autocmd Filetype rmd map <F10> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
@@ -56,8 +55,19 @@
     nmap <S-Tab> :bn<CR>
     nmap <Tab> :bp<CR>
 
+" Undo redo
+    nnoremap U <C-R>
+    " If you want to use C-Z, C-Y
+    " nnoremap <C-Z> u
+    " nnoremap <C-Y> <C-R>
+
+    " Or use undo redo in insert mode
+    inoremap <C-Z> <C-O>u
+    inoremap <C-Y> <C-O><C-R>
+
+
 "----------------------------------------------------------------------
-"               Map Leader to '<space>' 
+"               Map Leader to '<space>'
 "               Map Llocalleader to \\
 "----------------------------------------------------------------------
 
@@ -79,7 +89,7 @@
 " Delete Buffer, but keep the window open
     nnoremap <leader>d :bp\|bd! #<CR>
 
-" Jumplist stuff -> Backward and forward in vim jumps 
+" Jumplist stuff -> Backward and forward in vim jumps
 " -> C-i && C-o aint that hard
     "nnoremap <leader>i <C-i>
     "nnoremap <leader>o <C-o>
@@ -93,10 +103,20 @@
 " Copy & Paste into vim in normal mode
     noremap <leader>p  "+p
     noremap <leader>y  "+y
+    noremap yy "+y"
+
 
 " Quicksave and Quickquit in vim!
     nnoremap <leader>s :update<cr>
     nnoremap <leader>q :q!<CR>
+    nnoremap <A-s> :w<CR>
+    map <leader>c :bp<bar>sp<bar>bn<bar>bd<CR>
+" Resize Vim window
+    nnoremap <Up> :resize +2<CR>
+    nnoremap <Down> :resize -2<CR>
+    nnoremap <Left> :vertical resize +2<CR>
+    nnoremap <Right> :vertical resize -2<CR>
+
 
 " Split window
     nnoremap <leader>vs :split<Return>
@@ -141,15 +161,6 @@
 " Leader+zv = new terminal in a new vertical split
     nnoremap <leader>zv :vsplit<CR>:call TerminalCreate()<CR>
 
-"----------------------------------------------------------------------
-"                           Snippets!
-"----------------------------------------------------------------------
-" Basic HTML Snippet!
-    nnoremap ,html :-1read $XDG_CONFIG_HOME/nvim/snippets/skeleton.html<CR>7jf>a
-
-" Basic CSS Snippet!
-    nnoremap ,css :-1read $XDG_CONFIG_HOME/nvim/snippets/cssComment.css<CR>jA
-    nnoremap ,csss :-1read $XDG_CONFIG_HOME/nvim/snippets/skeleton.css<CR>
 
 " Markdown Remaps
 function! PandocCreate()
@@ -176,7 +187,7 @@ endfunction
 
 " LaTeX Remaps
     autocmd FileType tex nnoremap ,comp :update<CR>:call LatexCreate()<CR>
-    autocmd FileType tex nnoremap ,top :-1read $XDG_CONFIG_HOME//nvim/snippets/blockLatex.txt<CR>
+    autocmd FileType tex nnoremap ,top :-1read $HOME//nvim/snippets/blockLatex.txt<CR>
 
 
 " Make/Compile current Groff MOM File
@@ -193,30 +204,52 @@ endfunction
     "autocmd BufRead,BufNewFile *.ms,*.me,*.mom set filetype=groff
     "autocmd FileType groff nnoremap ,ee i.EQ<CR>.EN<ESC>O<tab>
     "autocmd FileType groff nnoremap ,cc i\" <ESC>a
-    "autocmd FileType groff nnoremap ,block :read $XDG_CONFIG_HOME/nvim/snippets/blockGroff.txt<CR>jA
-    "autocmd FileType groff nnoremap ,top :-1read $XDG_CONFIG_HOME/nvim/snippets/topGroff.txt<CR>2jA <C-R>=strftime("%A %B %d %Y, at %I:%M %p %Z")<CR><ESC>jA 
-    "autocmd FileType groff nnoremap ,mom :-1read $XDG_CONFIG_HOME/nvim/snippets/momGroff.txt<CR>
-    "autocmd FileType groff nnoremap ,groff :-1read $XDG_CONFIG_HOME/nvim/snippets/groff.txt<CR>
+    "autocmd FileType groff nnoremap ,block :read $HOME/.config/nvim/snippets/blockGroff.txt<CR>jA
+    "autocmd FileType groff nnoremap ,top :-1read $HOME/.config/nvim/snippets/topGroff.txt<CR>2jA <C-R>=strftime("%A %B %d %Y, at %I:%M %p %Z")<CR><ESC>jA
+    "autocmd FileType groff nnoremap ,mom :-1read $HOME/.config/nvim/snippets/momGroff.txt<CR>
+    "autocmd FileType groff nnoremap ,groff :-1read $HOME/.config/nvim/snippets/groff.txt<CR>
     "autocmd FileType groff nnoremap ,comp :update<CR>:call GroffCreate()<CR>
 
 " School's C++ top snippet
-    nnoremap ,top :-1read $XDG_CONFIG_HOME/nvim/snippets/top.txt<CR>2jA <C-R>=strftime("%A %B %d %Y, at %I:%M %p %Z")<CR><ESC>jA 
+    nnoremap ,top :-1read $HOME/.config/nvim/snippets/top.txt<CR>2jA <C-R>=strftime("%A %B %d %Y, at %I:%M %p %Z")<CR><ESC>jA
 
 " School's Function block snippet
-    nnoremap ,block :read $XDG_CONFIG_HOME/nvim/snippets/block.txt<CR>jA
+    nnoremap ,block :read $HOME/.config/nvim/snippets/block.txt<CR>jA
 
 " C++ int main()
-    nnoremap ,c++ :read $XDG_CONFIG_HOME/nvim/snippets/c++.txt<CR>jo<tab>
+    nnoremap ,c++ :read $HOME/.config/nvim/snippets/c++.txt<CR>jo<tab>
 
 " Post snippet
-    nnoremap ,post :-1read $XDG_CONFIG_HOME/nvim/snippets/post.md<CR>
+    nnoremap ,post :-1read $HOME/.config/nvim/snippets/post.md<CR>
 
 " YAML snippet
-    nnoremap ,yaml :-1read $XDG_CONFIG_HOME/nvim/snippets/yaml.md<CR>
-    nnoremap ,yaml1 :-1read $XDG_CONFIG_HOME/nvim/snippets/yamlcs.md<CR>
+    nnoremap ,yaml :-1read $HOME/.config/nvim/snippets/yaml.md<CR>
+    nnoremap ,yaml1 :-1read $HOME/.config/nvim/snippets/yamlcs.md<CR>
 
 " MLK's Dream Speech
-    nnoremap ,mlk :read $XDG_CONFIG_HOME/nvim/snippets/mlk.txt<CR>
+    nnoremap ,mlk :read $HOME/.config/nvim/snippets/mlk.txt<CR>
 
 " Job snippet
-    nnoremap ,job :read $XDG_CONFIG_HOME/nvim/snippets/job.txt<CR>i
+    nnoremap ,job :read $HOME/.config/nvim/snippets/job.txt<CR>i
+
+
+"-----------------------------------------------------------------
+"                           Snippets
+"-----------------------------------------------------------------
+
+" Basic HTML Snippet!
+    nnoremap ,html :-1read $HOME/.config/nvim/snippets/skeleton.html<CR>7jf>a
+
+" Basic CSS Snippet!
+    nnoremap ,css :-1read $HOME/.config/nvim/snippets/cssComment.css<CR>jA
+    nnoremap ,csss :-1read $HOME/.config/nvim/snippets/skeleton.css<CR>
+
+
+"-------------------------------------------------------------------
+"*******************************************************************
+"                       TRANSPARENCY
+"*******************************************************************
+"-------------------------------------------------------------------
+" Set transparent color - let's it always in the end
+" Set vim to transparent before starting so no settings can change it
+"hi Normal guibg=NONE ctermbg=NONE
