@@ -13,16 +13,19 @@
     set smartcase                  " if you search with an upercase it
 " will suddenly start to care about the case
     set spelllang=en_us            " Turn on spell check?
-    set nospell                    " Turn off spellcheck
+    set spell                    " Turn off spellcheck
     set mouse=a                    " Allow Mouse to work (I know, I suck)
     set autoindent                 " Makes it so that things are indented when needed (i think)
+    set autoread                   " Auto reload a file when it change on disk
     set mousemodel=popup
     set t_Co=256
     set guioptions=egmrti
     set gfn=Monospace\ 10
     set cursorline                 " Cursorline in vim
     set expandtab                  " Tabs are spaces
-    set tabstop=8                  " TAB becomes 4 spaces
+    set tabpagemax=15
+    set showtabline=2
+    set tabstop=4                  " TAB becomes 4 spaces
     set softtabstop=4              " TAB becomes 4 spaces in Vim operations
     set shiftwidth=4               " Number of spaces for indentation
     set hlsearch                   " Highlight search results
@@ -42,6 +45,7 @@
     set titlestring=%F
     set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
     set wildmenu                   " Visual autocomplete for command menu
+    set path+=**                   " Provide tab-completion for all file-related tasks
     set splitbelow                 " Splits open at the bottom, unlike vim defaults.
     set splitright                 " Splits open at the right, unlike vim defaults.
     set wildignorecase
@@ -52,7 +56,6 @@
     set wildignore+=*.tar.*
     set noswapfile                 " NO SWAP FILES
     set wildcharm=<C-z>            " Juggling with buffers
-
 " Disable automatic comment insertion
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -60,6 +63,9 @@
     autocmd Filetype css setlocal  tabstop=2 shiftwidth=2 softtabstop=2  " Set tabs to 2 spaces in html and css
     autocmd Filetype html setlocal  tabstop=2 shiftwidth=2 softtabstop=2 " Set tabs to 2 spaces in html and css
     autocmd Filetype javascript  setlocal  tabstop=2 shiftwidth=2 softtabstop=2  " Set tabs to 2 spaces in html and css
+    autocmd Filetype javascriptreact  setlocal  tabstop=2 shiftwidth=2 softtabstop=2  " Set tabs to 2 spaces in html and css
+    autocmd Filetype typescript  setlocal  tabstop=2 shiftwidth=2 softtabstop=2  " Set tabs to 2 spaces in html and css
+    autocmd Filetype typescriptreact  setlocal  tabstop=2 shiftwidth=2 softtabstop=2  " Set tabs to 2 spaces in html and css
 
 " Turn off Cursorline in insert mode
     autocmd InsertLeave,WinEnter * set cursorline
