@@ -60,6 +60,7 @@ call plug#begin(expand('~/./plugged'))
     Plug 'reedes/vim-pencil'
     Plug 'reedes/vim-colors-pencil'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+    Plug 'mzlogin/vim-markdown-toc'
     Plug 'arthurxavierx/vim-unicoder'
     Plug 'psliwka/vim-smoothie'
     " NEXT LEVEL SHIT
@@ -91,7 +92,7 @@ call plug#begin(expand('~/./plugged'))
     Plug 'Rigellute/shades-of-purple.vim'
     Plug 'joshdick/onedark.vim'
     Plug 'voldikss/vim-floaterm'
-
+    Plug 'dracula/vim', { 'as': 'dracula' }
 
 
 "*****************************************************************************
@@ -113,10 +114,12 @@ Plug 'mattn/emmet-vim'
 
 " javascript & typescript
 Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'peitalin/vim-jsx-typescript'
+
 
 
 " python
@@ -263,10 +266,6 @@ endif
 " For Neovim 0.1.3 and 0.1.4
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-" colorscheme rigel
-" colorscheme codedark
-" colorscheme onedark
-
 " True color support for vim-one
 if (empty($TMUX))
   if (has("nvim"))
@@ -281,11 +280,12 @@ endif
 
 " let g:airline_theme='one'
 " colorscheme one
-" set background=dark  " for the dark version
-colorscheme night-owl  " shades_of_purple
-
-
-
+"set background=dark  " for the dark version
+"colorscheme night-owl  " shades_of_purple
+" colorscheme rigel
+" colorscheme codedark
+" colorscheme onedark
+colorscheme dracula
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
@@ -335,7 +335,7 @@ nnoremap N Nzzzv
     endfunction
 
     let g:lightline = {
-          \ 'colorscheme': 'nightowl',
+          \ 'colorscheme': 'dracula',
           \ 'active': {
           \   'left': [ [ 'mode', 'paste' ],
           \             [ 'gitbranch','cocstatus', 'readonly', 'relativepath', 'modified', 'method'] ],
@@ -819,3 +819,54 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 " Hight light for large file
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+
+" vim-javascript
+" Enable syntax highlight plugin for JSDoc, NGDoc, Flox
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+
+" Enable highlight for based vim-javascript
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+augroup END
+
+" yats.vim
+" config for special keyword as addEventListener
+let g:yats_host_keyword = 1
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+
+" ----------------------------------------------
+" vim-jsx-typescript
+" Set custome jsx-tag color with vim-jsx-typescript
+" https://github.com/peitalin/vim-jsx-typescript
+" dark red
+hi tsxTagName guifg=#E06C75
+hi tsxComponentName guifg=#E06C75
+hi tsxCloseComponentName guifg=#E06C75
+
+" orange
+hi tsxCloseString guifg=#F99575
+hi tsxCloseTag guifg=#F99575
+hi tsxCloseTagName guifg=#F99575
+hi tsxAttributeBraces guifg=#F99575
+hi tsxEqual guifg=#F99575
+
+" yellow
+hi tsxAttrib guifg=#F8BD7F cterm=italic
+" light-grey
+hi tsxTypeBraces guifg=#999999
+" dark-grey
+hi tsxTypes guifg=#666666
+
+hi ReactState guifg=#C176A7
+hi ReactProps guifg=#D19A66
+hi ApolloGraphQL guifg=#CB886B
+hi Events ctermfg=204 guifg=#56B6C2
+hi ReduxKeywords ctermfg=204 guifg=#C678DD
+hi ReduxHooksKeywords ctermfg=204 guifg=#C176A7
+hi WebBrowser ctermfg=204 guifg=#56B6C2
+hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
