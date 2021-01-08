@@ -1,31 +1,33 @@
 {
-  "workspace.ignoredFiletypes": ["log", "txt", "help"],
-  "python.jediEnabled": false,
-  "suggest.minTriggerInputLength": 0,
-  "suggest.echodocSupport": true,
-  "suggest.maxCompleteItemCount": 20,
+  "json.enable": true,
+  "tsserver.log": "verbose",
+  "tsserver.enable": true,
+  "tsserver.enableJavascript": true,
+  "tsserver.formatOnType": true,
+  "coc.preferences.bracketEnterImprove": true,
+  "coc.preferences.enableFloatHighlight": true,
+  "coc.preferences.snippets.enable": true,
+  "coc.preferences.previewAutoClose": true,
+  "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
-    "json",
-    "css",
-    "html",
-    "markdown",
-    "dart"
-  ],
-  "eslint.filetypes": [
-    "javascript",
     "typescript",
     "typescriptreact",
+    "javascript",
     "javascriptreact",
-    "typescript.tsx"
+    "css",
+    "markdown",
+    "json",
+    "html",
+    "python",
+    "ruby",
+    "prisma"
   ],
-  "diagnostic.errorSign": "•",
-  "diagnostic.warningSign": "•",
-  "diagnostic.infoSign": "•",
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "filetypes": ["go"]
-    }
-  }
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.disableSuccessMessage": true
 }
