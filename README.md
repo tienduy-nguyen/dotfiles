@@ -1,3 +1,8 @@
 # Dotfiles
 
-My configuration files for neovim, alacritty and tmux.
+My configuration files for:
+- Neovim
+- Zsh & Oh My Zsh
+- Alacritty terminal
+- Tmux
+- Vscode settings & vscode extensions
