@@ -65,8 +65,6 @@ window:
   # Window title
   #title: Alacritty
   window.dynamic_title: true
-  startup_mode: Windowed
-
   # Window class (Linux only):
   #class: Alacritty
    # Window class (Linux/BSD only):
