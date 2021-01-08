@@ -130,15 +130,15 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # added by travis gem
-[ ! -s /home/tienduy/.travis/travis.sh ] || source /home/tienduy/.travis/travis.sh
+[ ! -s /home/<my username>/.travis/travis.sh ] || source /home/<my username>/.travis/travis.sh
 
-export DENO_INSTALL="/home/tienduy/.deno"
+export DENO_INSTALL="/home/<my username>/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 alias vi="nvim"
 alias vim="nvim"
 source "$HOME/.cargo/env"
 export PATH="$HOME/.cargo/bin:$PATH"
-source /home/tienduy/alacritty/extra/completions/alacritty.bash
+source /home/<my username>/alacritty/extra/completions/alacritty.bash
 source ~/.bash_completion/alacritty
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
