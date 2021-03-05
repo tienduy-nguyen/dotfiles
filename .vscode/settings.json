@@ -141,3 +141,310 @@
     "debug.javascript.unmapMissingSources": true,
 
 }
+{
+  "workbench.iconTheme": "vscode-icons",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "terminal.integrated.env.windows": {
+    "CMDER_ROOT": "C:\\Tools"
+  },
+  "terminal.integrated.shellArgs.windows": [
+    "/k",
+    "%CMDER_ROOT%\\vendor\\bin\\vscode_init.cmd"
+  ],
+
+  "git.confirmSync": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "window.zoomLevel": -1,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "editor.minimap.enabled": false,
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "files.exclude": {
+    "-**/node_modules": true,
+    "**/.cache": true,
+    "**/.jekyll-cache": true,
+    "**/.vscode1": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[sass]": {
+    "editor.defaultFormatter": "michelemelluso.code-beautifier"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.singleQuote": true,
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "editor.formatOnSave": true,
+  "go.formatTool": "gofmt",
+  "prettier.jsxSingleQuote": true,
+  "editor.tabSize": 2,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnPaste": false
+  },
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "beautify.config": "",
+  "sync.gist": "736e2d164bad09a2751af217e1412dce",
+  "terminal.integrated.fontFamily": "Menlo for Powerline",
+  "python.languageServer": "Pylance",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "python.formatting.provider": "black",
+  "python.formatting.autopep8Args": [
+    "--max-line-length=120",
+    "--experimental",
+    "--indent_size=2"
+  ],
+  "python.formatting.yapfArgs": [
+    "--style",
+    "{based_on_style: chromium, indent_width: 20}"
+  ],
+  "python.formatting.blackArgs": ["--line-length=119"],
+  "python.sortImports.args": ["-rc", "--atomic"],
+  "rufo.exe": "rufo",
+  "rufo.useBundler": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": [],
+  "[csharp]": {
+    "editor.defaultFormatter": "Leopotam.csharpfixformat"
+  },
+  // single: Comments are single-line comments that start with three slashes (///) (Default)
+  // delimited: Delimited comments that start with a slash and two stars (/**)
+  "docomment.syntax": "single",
+  // Press the Enter key to activate a command (Default: false)
+  "docomment.activateOnEnter": false,
+  // User-controllable options
+  "docomment.advanced": {
+    "cs": {
+      "namespace": {
+        "attributes": ["summary"]
+      },
+      "class": {
+        "attributes": ["summary", "typeparam"]
+      },
+      "interface": {
+        "attributes": ["summary", "typeparam"]
+      },
+      "struct": {
+        "attributes": ["summary"]
+      },
+      "enum": {
+        "attributes": ["summary"]
+      },
+      "delegate": {
+        "attributes": ["summary", "param", "typeparam", "returns"]
+      },
+      "field": {
+        "attributes": ["summary"]
+      },
+      "property": {
+        "attributes": ["summary", "value"]
+      },
+      "method": {
+        "attributes": ["summary", "param", "typeparam", "returns"]
+      },
+      "event": {
+        "attributes": ["summary"]
+      }
+    }
+  },
+  "debug.javascript.autoAttachFilter": "onlyWithFlag",
+  "debug.javascript.unmapMissingSources": true,
+  "vs-kubernetes": {
+    "vs-kubernetes.helm-path.linux": "/home/tienduy/.vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vs-kubernetes.minikube-path.linux": "/home/tienduy/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+    "vs-kubernetes.draft-path.linux": "/home/tienduy/.vs-kubernetes/tools/draft/linux-amd64/draft"
+  },
+  "cSpell.userWords": [
+    "Metatags",
+    "Unheart",
+    "Unpromisify",
+    "Vite",
+    "asyncio",
+    "chakra",
+    "chdir",
+    "codegen",
+    "firestore",
+    "loadables",
+    "localstorage",
+    "microservice",
+    "middlewares",
+    "nextjs",
+    "preconnect",
+    "reloadable",
+    "scrapy",
+    "semibold",
+    "serializable",
+    "startproject",
+    "tailwindcss",
+    "todos",
+    "typeorm",
+    "vitejs"
+  ],
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "javascript",
+    "javascript": "javascript",
+    "html": "HTML"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "workbench.colorTheme": "Dracula",
+  "tabnine.experimentalAutoImports": true,
+  "python.pythonPath": "/usr/bin/python3",
+  "tabnine.disable_file_regex": [
+    "[.]js$",
+    "[.]ts$",
+    "[.]jsx$",
+    "[.]tsx$",
+    "[.]json$"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "onFocusChange",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.easymotionMarkerooundColor": "#020202",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine", "extension.vim_escape"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "after": ["_"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<leader>", "r", "e"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "r", "f"],
+      "commands": ["fileutils.renameFile"]
+    },
+    {
+      "before": ["<leader>", "o", "g"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
+      "before": ["<leader>", "o", "o"],
+      "commands": ["workbench.action.showEditorsInActiveGroup"]
+    },
+    {
+      "before": ["<leader>", "o", "p"],
+      "commands": ["workbench.action.quickOpen"]
+    }
+  ],
+  "vim.leader": "<space>",
+
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    // VS Code new marker @ next occurence
+    "<C-d>": false,
+    // Copy
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    "<C-z>": false,
+    "<C-y>": false,
+    "<C-k>": false,
+    "<C-b>": false,
+    "<C-w>": false
+  }
+}
